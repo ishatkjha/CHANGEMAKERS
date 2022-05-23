@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHANGEMAKERS - AN NGO FOR CHANGE</title>
+    <link rel="stylesheet" href="Watercrisis.css">
+</head>
+<body>
+    <nav class="navbar background h-nav-resp ">
+
+        <ul class="nav-list v-class-resp">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#AboutUs">About Us</a></li>
+            <li><a href="#Volunteer">Volunteer or Contact Us</a></li>
+        </ul>
+        <div class="rightNav v-class-resp">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
+        </div>
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <section class="background firstSection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <p class="text-big">"Be Aware Or The End is Near"</p>
+                <p class="text-small">Saving Lives From Flood is our Motto and we will stand besides it.
+                </p>
+                <div class="buttons">
+                    <br>
+                    <a href="https://www.youtube.com/results?search_query=documentary+on+flood">
+                    <button class="btn">Watch Informative Documentaries on Flood</button>
+                </a>
+                </div>
+            </div>
+            <div class="secondHalf">
+                <img src="THE CHANGEMAKERS LOGO/Slide 1.png" alt="our logo">
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <p class="sectionTag">Our Motto :- To save lives of people from flood, reduce the mortality ratio and make each citizen aware to save their lives from floods. </p>
+        <p class="sectionSubTag">Let's Come Together and join hands for the cause and try to acheive success in reducing the number of deaths due to floods.</p>
+        <div class="thumbnail">
+            <img src="flood.jpg" alt="" class="imgFlood">
+        </div>
+    </section>
+    <section class="backg Volunteer">
+        <form onsubmit="sendEmail(); reset(); return false;">
+        <h1 class="text-center">Volunteer Or Contact Us</h1>
+        <div class="form">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+            <input type="text" name="phone" id="phone" placeholder="Enter Your Phone Number" required>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email Address" required>
+            <input type="text" name="country" id="country" placeholder="Enter Your Country" required>
+            <textarea name="text" id="text" cols="67" rows="2" placeholder="Elaborate Your Concern/Working Experience" required></textarea>
+            <div class="centere">
+                <button type="submit" class="fjfj">Submit</button>
+            </div>
+    </form>
+        </div>
+    </section>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <footer class="f">
+    <br>
+        <p class="centere">
+        Copyright &copy 2022-All Rights Reserved;
+    </p>
+    <br>
+    </footer>
+    <script src="Watercrisis.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+ 
+  <script>
+    function sendEmail(){
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "Ishat Kumar Jha",
+        Password: "password",
+        To: 'ishatkumarjha@gmail.com',
+        From: document.getElementById("email").value,
+        Subject: "NEW CONTACT FORM",
+        Body: "Name: " + document.getElementById("name").value
+        + "<br> Email: "+document.getElementById("email").value
+        + "<br> Phone Number: "+document.getElementById("phone").value
+        +"<br> Country: "+ document.getElementById("country").value
+        + "<br> Concern/Experience: "+ document.getElementById("text").value
+      }).then(
+        message => alert("Message Sent Succesfully😊")
+        );
+    }
+  </script>
+</body>
+</html>
